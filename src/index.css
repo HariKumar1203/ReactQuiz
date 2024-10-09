@@ -132,9 +132,9 @@ progress {
   background-color: var(--color-darkest);
 }
 
-.btn-option:not([disabled]):hover {
+/* .btn-option:not([disabled]):hover {
   transform: translateX(1.2rem);
-}
+} */
 
 .btn[disabled]:hover {
   cursor: not-allowed;
@@ -167,9 +167,9 @@ progress {
   color: var(--color-darkest);
 }
 
-.answer {
+/* .answer {
   transform: translateX(2rem);
-}
+} */
 
 .result {
   background-color: var(--color-theme);

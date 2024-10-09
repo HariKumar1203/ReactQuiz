@@ -7,7 +7,7 @@ function Option({ question }) {
     <div className="options">
       {question.options.map((option, index) => (
         <button
-          className={`btn btn-option ${index === answer ? "answer" : ""} 
+          className={`btn btn-option  
             ${
               hasAnswered
                 ? index === question.correctOption
