@@ -1,27 +1,15 @@
-function Question({ question, dispatch, answer }) {
-  const hasAnswered = answer !== null;
+import { useQuiz } from "./components/QuizProvider";
+import Option from "./Option";
+
+function Question() {
+  const { questions, index } = useQuiz();
+
+  const question = questions.at(index);
+
   return (
     <div>
       <h4>{question.question}</h4>
-      <div className="options">
-        {question.options.map((option, index) => (
-          <button
-            className={`btn btn-option ${index === answer ? "answer" : ""} 
-            ${
-              hasAnswered
-                ? index === question.correctOption
-                  ? "correct"
-                  : "wrong"
-                : ""
-            }`}
-            key={option}
-            disabled={hasAnswered}
-            onClick={() => dispatch({ type: "newAnswer", payload: index })}
-          >
-            {option}
-          </button>
-        ))}
-      </div>
+      <Option question={question} />
     </div>
   );
 }

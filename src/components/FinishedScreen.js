@@ -1,4 +1,7 @@
-function FinishedScreen({ points, maxQuestionPoints, highscore, dispatch }) {
+import { useQuiz } from "./QuizProvider";
+
+function FinishedScreen() {
+  const { points, maxQuestionPoints, highscore, dispatch } = useQuiz();
   const percentage = (points / maxQuestionPoints) * 100;
   return (
     <>
